@@ -71,7 +71,3 @@ All the number plates recorded with timestamp :-
 In the text file :-
 
 ![Screenshot 2021-01-12 at 1 05 50 AM](https://user-images.githubusercontent.com/56078295/104637744-3277e480-56cb-11eb-814b-7c61d9e37d56.png)
-
-# Future Plan
-
-To use a web-camera with JETSON-NANO/RASPBERRY-PI 4
