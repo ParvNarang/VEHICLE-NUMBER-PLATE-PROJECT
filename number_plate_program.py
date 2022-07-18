@@ -69,7 +69,7 @@ def auto():
                             'https://api.platerecognizer.com/v1/plate-reader/',
                             data=dict(regions=regions),  # Optional
                             files=dict(upload=fp),
-                            headers={'Authorization': 'Token f2cd2223560ae4182a4476f32d2b835c941e3827'})
+                            headers={'Authorization': 'Token (add your key)'})
                     # pprint(response.json())
                     plate_number = response.json()['results'][0]['plate']
 
@@ -269,7 +269,7 @@ while True:
                             'https://api.platerecognizer.com/v1/plate-reader/',
                             data=dict(regions=regions),  # Optional
                             files=dict(upload=fp),
-                            headers={'Authorization': 'Token f2cd2223560ae4182a4476f32d2b835c941e3827'})
+                            headers={'Authorization': 'Token (add your key)'})
                     # pprint(response.json())
                     plate_number = response.json()['results'][0]['plate']
 
