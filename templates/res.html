@@ -1,0 +1,172 @@
+<html>
+<link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet'>
+<style>
+    h1 {
+        text-align: center;
+        font-family: Ubuntu;
+    }
+
+    span {
+        background-color: #e5f2ff;
+        color: #1477d2;
+        padding: 12px 24px;
+        border-radius: 100px;
+    }
+
+    body {
+        background-color: #1377d2;
+    }
+
+    p {
+        text-align: center;
+        font-size: 18px;
+        color: #22578a;
+        font-weight: bold;
+        font-family: Ubuntu;
+    }
+
+    div {
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    @import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Roboto');
+
+    * {
+        margin: 0;
+        padding: 0;
+        outline: 0;
+    }
+
+    .filter {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 1;
+        background: rgb(233, 76, 161);
+        background: -moz-linear-gradient(90deg, rgba(233, 76, 161, 1) 0%, rgba(199, 74, 233, 1) 100%);
+        background: -webkit-linear-gradient(90deg, rgba(233, 76, 161, 1) 0%, rgba(199, 74, 233, 1) 100%);
+        background: linear-gradient(90deg, rgba(233, 76, 161, 1) 0%, rgba(199, 74, 233, 1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e94ca1", endColorstr="#c74ae9", GradientType=1);
+        opacity: .7;
+    }
+
+    table {
+        z-index: 2;
+        width: 60%;
+        border-collapse: collapse;
+        margin: auto;
+        margin-top: 24px;
+        border-spacing: 0;
+        box-shadow: 0 2px 15px rgba(64, 64, 64, .7);
+        border-radius: 12px 12px 0 0;
+        overflow: hidden;
+    }
+
+    td,
+    th {
+        padding: 15px 20px;
+        text-align: center;
+
+
+    }
+
+    th {
+        background-color: #1477d2;
+        color: #fafafa;
+        font-family: Ubuntu;
+        font-weight: 200;
+        text-transform: uppercase;
+
+    }
+
+    tr {
+        width: 100%;
+        background-color: #fafafa;
+        font-family: Ubuntu;
+    }
+
+    tr:nth-child(even) {
+        background-color: #eeeeee;
+    }
+
+    .btn1 {
+        font-size: 16px;
+        font-family: Ubuntu;
+        border-radius: 4px;
+        font-weight: 200;
+        width: 200px;
+        background-color: #1377d2;
+        color: white;
+        border: none;
+        padding: 16px 14px;
+        text-align: center;
+        text-decoration: none;
+    }
+
+    .cont {
+        background-color: white;
+        min-height: 650px;
+    }
+</style>
+
+<head></head>
+
+<body>
+    <br>
+    <div class="cont">
+        <h1><span> Welcome Page </span></h1>
+        <br></br>
+        <p>
+            Last Numberplate: {{ json_object["numberplate"] }}
+        </p>
+        <table>
+            <tr>
+                <th>Details</th>
+                <th>Info</th>
+            </tr>
+            <tr>
+                <td>Region</td>
+                <td>{{json_object["region"]}}</td>
+            </tr>
+            <tr>
+                <td>State</td>
+                <td>{{json_object["state"]}}</td>
+            </tr>
+            <tr>
+                <td>NumberPlate</td>
+                <td>{{json_object["numberplate"]}}</td>
+            </tr>
+            <tr>
+                <td>Time of Entry</td>
+                <td>{{json_object["time"]}}</td>
+            </tr>
+            <tr>
+                <td>Vehicle of Building</td>
+                <td>{{json_object["vehicle-of-building"]}}</td>
+            </tr>
+            <tr>
+                <td>Phone Number</td>
+                <td>{{json_object["phone-number"]}}</td>
+            </tr>
+        </table>
+        <div>
+            <a href="/all_veh">
+                <button class="btn1">
+                    Show all Numberplates
+                </button>
+            </a>
+            <br></br>
+            <a href="/reg_veh">
+                <button class="btn1">
+                    Show Registered Vehicles
+                </button>
+            </a>
+        </div>
+        <br>
+    </div>
+</body>
+
+</html>

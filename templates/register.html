@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet'>
+<style>
+    h1 {
+        text-align: center;
+        font-weight: bold;
+        color: white;
+        padding: 50px 12px;
+        background-color: #004090;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+    div {
+        text-align: center;
+    }
+
+    label {
+        color: white;
+    }
+
+    body {
+        font-family: Ubuntu;
+        background-color: #0d54ac;
+    }
+
+    .container {
+        background-color: #2a7dbb;
+        border-radius: 10px;
+        margin-top: 30px;
+    }
+
+    .p1 {
+        color: white;
+        font-size: 15px;
+        font-weight: bolder;
+        text-align: center;
+        /* background-color: #0d54ac; */
+        margin-bottom: 15px;
+        padding-top: 20px;
+        padding-bottom: 0px;
+        text-shadow: 12px black;
+    }
+
+    input {
+        margin-left: 10px;
+        border-color: #2a7dbb;
+        border-radius: 5px;
+        font-size: 19px;
+    }
+
+    p {
+        color: rgb(220, 219, 219);
+        font-size: 11px;
+        text-align: center;
+        margin-bottom: 5px;
+        margin-top: 0px;
+    }
+
+    .btn1 {
+        font-size: 16px;
+        font-family: Ubuntu;
+        border-radius: 4px;
+        font-weight: 200;
+        width: 200px;
+        background-color: #2a7dbb;
+        color: white;
+        border: outset 5px white;
+        padding: 16px 15px;
+        display: inline-block;
+        text-align: center;
+        margin-bottom: 40px;
+        text-decoration: none;
+    }
+
+    form {
+        margin-top: 40px;
+    }
+
+    .div1 {
+        background-color: #004090;
+        height: 130px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    .sb {
+        text-align: center;
+        font-weight: bold;
+        color: white;
+        background-color: #004090;
+    }
+</style>
+
+<body>
+    <div class="container" height="70%">
+        <div>
+            <div>
+                <h1>Register a Vehicle</h1>
+            </div>
+            <form method="post" action="/registered">
+                <label for="num">NumberPlate </label>
+                <input type="text" id="num" name="num"><br>
+                <br>
+                <label for="phone">Phone &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp </label>
+                <input type="text" id="phone" name="phone"><br>
+                <br>
+                <label for="address">Address &nbsp &nbsp &nbsp &nbsp &nbsp</label>
+                <input type="text" id="address" name="address"><br>
+                <br>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                <input type="submit" class="btn1">
+            </form>
+            <div class="sb">
+                <h1> Delete a NumberPlate</h1>
+            </div>
+            <form method="post" action="/deleted">
+                <label for="num">NumberPlate &nbsp&nbsp &nbsp</label>
+                <input type="text" id="num1" name="num1"><br>
+                <br>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                <input type="submit" class="btn1">
+            </form>
+
+            <div class="sb">
+                <h1> Update Details</h1>
+            </div>
+
+            <form method="post" action="/updated">
+                <label for="num"> Old NumberPlate &nbsp &nbsp</label>
+                <input type="text" id="num2" name="num2"><br>
+                <br>
+                <label for="num"> Add NumberPlate &nbsp &nbsp </label>
+                <input type="text" id="num3" name="num3"><br>
+                <br>
+                <label for="num"> Add Phone &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp </label>
+                <input type="text" id="phone2" name="phone2"><br>
+                <br>
+                <label for="num"> Add Address &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</label>
+                <input type="text" id="address2" name="address2"><br>
+                <br>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                &nbsp&nbsp&nbsp&nbsp
+                <input type="submit" class="btn1">
+            </form>
+
+            <div class="div1">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

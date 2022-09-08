@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet'>
+<style>
+    h1 {
+        text-align: center;
+        font-weight: bold;
+        color: white;
+        padding: 50px 12px;
+        background-color: #004090;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+    div {
+        text-align: center;
+    }
+
+    body {
+        font-family: Ubuntu;
+        background-color: #0d54ac;
+    }
+
+    .container {
+        background-color: #2a7dbb;
+        border-radius: 10px;
+    }
+
+    .p1 {
+        color: white;
+        font-size: 15px;
+        font-weight: bolder;
+        text-align: center;
+        /* background-color: #0d54ac; */
+        margin-bottom: 15px;
+        padding-top: 20px;
+        padding-bottom: 0px;
+        text-shadow: 12px black;
+    }
+
+    p {
+        color: rgb(220, 219, 219);
+        font-size: 11px;
+        text-align: center;
+        margin-bottom: 5px;
+        margin-top: 0px;
+    }
+
+    .btn1 {
+        font-size: 16px;
+        font-family: Ubuntu;
+        border-radius: 4px;
+        font-weight: 200;
+        width: 200px;
+        background-color: #2a7dbb;
+        color: white;
+        border: outset 5px white;
+        padding: 16px 14px;
+        display: inline-block;
+        text-align: center;
+        text-decoration: none;
+    }
+
+    .instruction {
+        margin-top: 80px;
+        padding-bottom: 24px;
+        background-color: #004090;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+</style>
+
+<body>
+    <div class="container" height="70%">
+        <div class="row">
+            <div>
+                <h1 class="mt-5">NUMBERPLATE WEB APP</h1>
+                <img src="{{ url_for('video_feed') }}"
+                    style="border-radius: 12px; border: solid 5px #0d54ac; width: 400px; height: 280px;">
+            </div>
+            <br></br>
+            <form method="post" action="/">
+                <button type="submit" name="enter" value="enter" class="btn1">
+                    Press to Click &nbsp; 📸
+                </button>
+                <br> </br>
+
+            </form>
+            <a href="/num">
+                <button class="btn1">
+                    Check Numberplate
+                </button>
+            </a>&nbsp&nbsp
+            <a href="/register">
+                <button class="btn1">
+                    Update Data
+                </button>
+            </a>
+            <br>
+            </br>
+            <a href="/all_veh">
+                <button class="btn1">
+                    Show all Numberplates
+                </button>
+            </a>&nbsp&nbsp
+            <a href="/reg_veh">
+                <button class="btn1">
+                    Show Registered Vehicles
+                </button>
+            </a>
+
+            <div class="instruction">
+                <p class="p1"> INSTRUCTIONS </p>
+                <p> Click on the first button to capture the image of the NumberPlate. Click only when the
+                    numberplate is
+                    detected. </p>
+                <p> As soon as the image is captured, you can click the 2nd button, to check the details of
+                    the
+                    current
+                    numberplate.</p>
+                <p> To run the app type "localhost:1234" on the web browser</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

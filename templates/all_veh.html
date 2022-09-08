@@ -1,0 +1,124 @@
+<html>
+<link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet'>
+<style>
+    h1 {
+        text-align: center;
+        font-family: Ubuntu;
+    }
+
+    span {
+        background-color: #e5f2ff;
+        color: #1477d2;
+        padding: 12px 24px;
+        border-radius: 100px;
+    }
+
+    body {
+        background-color: #1477d2;
+    }
+
+    p {
+        text-align: center;
+        font-size: 18px;
+        color: #22578a;
+        font-weight: bold;
+        font-family: Ubuntu;
+    }
+
+    @import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Roboto');
+
+    * {
+        margin: 0;
+        padding: 0;
+        outline: 0;
+    }
+
+    .filter {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 1;
+        background: rgb(233, 76, 161);
+        background: -moz-linear-gradient(90deg, rgba(233, 76, 161, 1) 0%, rgba(199, 74, 233, 1) 100%);
+        background: -webkit-linear-gradient(90deg, rgba(233, 76, 161, 1) 0%, rgba(199, 74, 233, 1) 100%);
+        background: linear-gradient(90deg, rgba(233, 76, 161, 1) 0%, rgba(199, 74, 233, 1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e94ca1", endColorstr="#c74ae9", GradientType=1);
+        opacity: .7;
+    }
+
+    table {
+        z-index: 2;
+        width: 60%;
+        border-collapse: collapse;
+        margin: auto;
+        margin-top: 24px;
+        border-spacing: 0;
+        box-shadow: 0 2px 15px rgba(64, 64, 64, .7);
+        border-radius: 12px 12px 12px 12px;
+        overflow: hidden;
+        margin-bottom: 30px;
+    }
+
+    td,
+    th {
+        padding: 15px 20px;
+        text-align: center;
+    }
+
+    th {
+        background-color: #1477d2;
+        color: #fafafa;
+        font-family: Ubuntu;
+        font-weight: 200;
+        text-transform: uppercase;
+    }
+
+    tr {
+        width: 100%;
+        background-color: #fafafa;
+        font-family: Ubuntu;
+    }
+
+    tr:nth-child(even) {
+        background-color: #eeeeee;
+    }
+
+    .cont {
+        background-color: white;
+        min-height: 650px;
+    }
+</style>
+
+<head></head>
+
+<body>
+    <br></br>
+    <div class="cont">
+        <h1><span>Entry of all Vehicles</span></h1>
+        <br></br>
+        <p>
+            Hello
+        </p>
+        <table>
+            <tr>
+                <th>NumberPlate</th>
+                <th>Time Entered</th>
+                <th>Vehicle of building</th>
+                <th>State</th>
+            </tr>
+            {%for i in range(0,len)|reverse%}
+            <tr>
+                <td>{{lst[i]["numberplate"]}}</td>
+                <td>{{lst[i]["time"]}}</td>
+                <td>{{lst[i]["vehicle-of-building"]}}</td>
+                <td>{{lst[i]["state"]}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        <br></br>
+    </div>
+</body>
+
+</html>
